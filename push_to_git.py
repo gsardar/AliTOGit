@@ -15,7 +15,7 @@ def push_to_github(repo_url, local_dir):
     subprocess.run(["git", "commit", "-m", "Pushed files from Python"], check=True)
     
     # Set remote repository
-    subprocess.run(["git", "remote", "add", "origin", repo_url], check=True)
+    #subprocess.run(["git", "remote", "add", "origin", repo_url], check=True)
     
     # Push to GitHub
     subprocess.run(["git", "push", "-u", "origin", "master"], check=True)
