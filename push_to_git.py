@@ -48,7 +48,7 @@ def download_images_and_update_csv(input_csv, output_csv, repo_url):
                             downloaded += len(chunk)
                             image_file.write(chunk)
                             progress_bar.update(len(chunk))
-                downloaded_image_urls.append(f"https://raw.githubusercontent.com/gsardar/AliTOGit/raw/master/{os.path.relpath(image_path)}")
+                downloaded_image_urls.append(f"https://raw.githubusercontent.com/gsardar/AliTOGit/master/{os.path.relpath(image_path)}")
                 print(f"Downloaded image {i}/{total_images} for product handle: {product_handle}")
             except requests.exceptions.RequestException as e:
                 print(f"Failed to download image {i}/{total_images} for product handle: {product_handle}")
@@ -70,7 +70,7 @@ def download_images_and_update_csv(input_csv, output_csv, repo_url):
     subprocess.run(["git", "init"], check=True)
     subprocess.run(["git", "add", "."], check=True)
     subprocess.run(["git", "commit", "-m", "Added images"], check=True)
-    subprocess.run(["git", "remote", "add", "origin", repo_url], check=True)
+    #subprocess.run(["git", "remote", "add", "origin", repo_url], check=True)
     subprocess.run(["git", "push", "-u", "origin", "master"], check=True)
 
     print("Images downloaded, CSV file updated, and changes pushed to the GitHub repository.")
