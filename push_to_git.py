@@ -55,7 +55,7 @@ def download_images_and_update_csv(input_csv, output_csv, repo_url):
                 print(e)
 
         # Update the row with the downloaded image URLs
-        row["downloaded_image_urls"] = ",".join(downloaded_image_urls)
+        row["downloaded_image_urls"] = ", ".join(downloaded_image_urls)
         updated_data.append(row)
 
     # Write the updated data to the output CSV file
