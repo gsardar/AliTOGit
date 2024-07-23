@@ -70,7 +70,7 @@ def download_images_and_update_csv(input_csv, output_csv, repo_url):
     subprocess.run(["git", "init"], check=True)
     subprocess.run(["git", "add", "."], check=True)
     subprocess.run(["git", "commit", "-m", "Added images"], check=True)
-    subprocess.run(["git", "remote", "add", "origin", repo_url], check=True)
+    #subprocess.run(["git", "remote", "add", "origin", repo_url], check=True)
     subprocess.run(["git", "push", "-u", "origin", "master"], check=True)
 
     print("Images downloaded, CSV file updated, and changes pushed to the GitHub repository.")
